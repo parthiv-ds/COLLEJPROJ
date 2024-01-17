@@ -1,0 +1,15 @@
+pandas 
+numpy
+scikit-learn
+matplotlib
+seaborn
+python-box
+pyYAML
+joblib
+types-PyYAML
+Flask
+imbalanced-learn
+requests
+db-sqlite3
+
+-e .

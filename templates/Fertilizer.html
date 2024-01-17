@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/crop.css">
+    <script src="../../static/js/cities.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h3>Crop Prediction</h3>
+                <div class="card">
+                    <h5 class="text-center mb-4">Crop Details</h5>
+                    <form class="form-card" action="predict2" method="post">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">nitrogen<span class="text-danger"> *</span></label> <input type="number" id="nitrogen" name="nitrogen" placeholder="nitrogen" min="0" max="42" step="0.1" required> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">phosphorous<span class="text-danger"> *</span></label> <input type="number" id="phosphorous" name="phosphorous" placeholder="phosphorous" min="0" max="42" step="0.1" required> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">pottasium<span class="text-danger"> *</span></label> <input type="number" id="pottasium" name="pottasium" placeholder="pottasium" min="0" max="19" step="0.1" required> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Moisture<span class="text-danger"> *</span></label> <input type="number" id="Moisture" name="Moisture" placeholder="Moisture" min="25" max="65" step="0.1" required> </div>
+                        </div>
+                        <!--
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">state<span class="text-danger"> *</span></label> 
+                                <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                                <script language="javascript">print_state("sts");</script>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">state<span class="text-danger"> *</span></label> 
+                                <select id ="state" class="form-control" required></select>
+                                <script language="javascript">print_state("sts");</script>
+                            </div>
+                        </div>
+                        --->
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">temprature<span class="text-danger"> *</span></label> <input type="temprature" id="temprature" name="temprature" placeholder="temprature" min="25" max="38" step="0.1" required> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">humidity<span class="text-danger"> *</span></label> <input type="humidity" id="humidity" name="humidity" placeholder="humidity" min="50" max="72" step="0.1" required> </div>
+                        </div>
+
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Select Soil:<span class="text-danger"> *</span></label> 
+                                <select class="form-select" aria-label="Default select example" id="soil" name="soil">
+                                    <option value="Black">Black</option>
+                                    <option value="Clayey">Clayey</option>
+                                    <option value="Loamy">Loamy</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Sandy">Sandy</option>
+                                  </select>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Select Crop:<span class="text-danger"> *</span></label> 
+                                <select class="form-select" aria-label="Default select example" id="crop" name="crop">
+                                    <option value="Maize">Maize</option>
+                                    <option value="Sugarcane">Sugarcane</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Tobacco">Tobacco</option>
+                                    <option value="Paddy">Paddy</option>
+                                    <option value="Barley">Barley</option>
+                                    <option value="Wheat">Wheat</option>
+                                    <option value="Millets">Millets</option>
+                                    <option value="Oil seeds">Oil seeds</option>
+                                    <option value="Pulses">Pulses</option>
+                                    <option value="Ground Nuts">Ground Nuts</option>
+                                  </select>
+                             </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary" value="predict2">Submit</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

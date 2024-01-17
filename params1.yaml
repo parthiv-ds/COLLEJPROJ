@@ -1,0 +1,3 @@
+RandomForestClassifier:
+  n_estimators : 3
+  random_state : 3

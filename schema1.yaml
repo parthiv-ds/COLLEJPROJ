@@ -1,0 +1,12 @@
+COLUMNS:
+  N : float64
+  P : float64
+  K : float64
+  temperature : float64
+  humidity : float64
+  ph : float64
+  rainfall : float64
+  label : object
+
+TARGET_COLUMN:
+  name : label 

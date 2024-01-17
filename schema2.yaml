@@ -1,0 +1,13 @@
+COLUMNS:
+  Temperature : int    
+  Humidity : int   
+  Moisture : int                   
+  N : int              
+  P : int               
+  K : int             
+  soil : object      
+  crop : object
+  Fertilizer: object
+
+TARGET_COLUMN:
+  name : Fertilizer

@@ -1,0 +1,32 @@
+artifacts_root: artifacts2
+
+
+data_ingestion:
+  root_dir: artifacts2/data_ingestion
+  database_path: DATABASE2/Fertilizer_Prediction.db
+  table_name: Fertilizer_Prediction
+  download_dir : artifacts2/data_ingestion
+
+data_validation:
+  root_dir: artifacts2/data_validation
+  download_dir: artifacts2/data_ingestion/Fertilizer_Prediction.csv
+  STATUS_FILE: artifacts2/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts2/data_transformation
+  data_path: artifacts2/data_ingestion/Fertilizer_Prediction.csv
+  soil_name: soil.joblib
+  crop_name: crop.joblib
+  Fertilizer_name: Fertilizer.joblib
+
+model_trainer:
+  root_dir: artifacts2/model_trainer
+  train_data_path: artifacts2/data_transformation/train.csv
+  test_data_path: artifacts2/data_transformation/test.csv
+  model_name: model2.joblib
+  
+model_evaluation:
+  root_dir: artifacts2/model_evaluation
+  test_data_path: artifacts2/data_transformation/test.csv
+  model_path: artifacts2/model_trainer/model2.joblib
+  metric_file_name: artifacts2/model_evaluation/metrics.json
